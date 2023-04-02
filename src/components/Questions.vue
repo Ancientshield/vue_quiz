@@ -4,10 +4,12 @@
 			<div class="bar"></div>
 			<div class="status">1 out of 3 questions answered</div>
 		</div>
+		<!-- qi 是 question index 縮寫 -->
 		<div
 			class="single-question"
-			v-for="question in questions"
+			v-for="(question, qi) in questions"
 			:key="question.q"
+			v-show="questionsAnswered === qi"
 		>
 			<div class="question">{{ question.q }}</div>
 			<div class="answers">
