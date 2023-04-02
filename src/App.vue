@@ -4,6 +4,7 @@
 			v-if="questionsAnswered < questions.length"
 			:questions="questions"
 			:questionsAnswered="questionsAnswered"
+			@question-answered="questionAnswered"
 		/>
 		<Result v-else />
 		<button type="button" class="reset-btn">Reset</button>
@@ -22,6 +23,7 @@
 		data() {
 			return {
 				questionsAnswered: 0,
+				totalCorrect: 0,
 				questions: [
 					{
 						q: 'What is 2 + 2?',
@@ -98,6 +100,13 @@
 					},
 				],
 			};
+		},
+		methods: {
+			questionAnswered(is_correct) {
+				if (is_correct) {
+					this.totalCorrect++;
+				}
+			},
 		},
 	};
 </script>
