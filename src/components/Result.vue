@@ -8,6 +8,7 @@
 <script>
 	export default {
 		name: 'Result',
+		props: ['results', 'totalCorrect'],
 	};
 </script>
 
