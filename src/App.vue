@@ -7,7 +7,14 @@
 			@question-answered="questionAnswered"
 		/>
 		<Result v-else :results="results" :totalCorrect="totalCorrect" />
-		<button type="button" class="reset-btn">Reset</button>
+		<button
+			type="button"
+			class="reset-btn"
+			@click.prevent="reset"
+			v-if="questionsAnswered === questions.length"
+		>
+			Reset
+		</button>
 	</div>
 </template>
 
@@ -108,6 +115,10 @@
 				}
 				// 即使答錯，題目也會換為下一題
 				this.questionsAnswered++;
+			},
+			reset() {
+				this.questionsAnswered = 0;
+				this.totalCorrect = 0;
 			},
 		},
 	};
@@ -233,6 +244,7 @@
 		padding: 10px 25px;
 		margin: 10px auto;
 		display: block;
+		cursor: pointer;
 	}
 
 	.result {
