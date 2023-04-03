@@ -3,7 +3,7 @@
 		<div class="progress">
 			<div
 				class="bar"
-				:style="{ width: `${(questionsAnswered / questions.length) * 100}%` }"
+				:style="{ width: `${questionsAnswered / (questions.length * 100)}%` }"
 			></div>
 			<div class="status">
 				{{ questionsAnswered }} out of {{ questions.length }} questions answered
