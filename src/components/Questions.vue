@@ -2,9 +2,11 @@
 	<div class="questions-ctr">
 		<div class="progress">
 			<div class="bar"></div>
-			<div class="status">1 out of 3 questions answered</div>
+			<div class="status">
+				{{ questionsAnswered }} out of questions answered
+			</div>
 		</div>
-		<!-- qi 是 question index 縮寫 -->
+		<!-- qi 是 question index 縮寫，由 v-for 回圈自動產生 跟 questions 無關 -->
 		<div
 			class="single-question"
 			v-for="(question, qi) in questions"

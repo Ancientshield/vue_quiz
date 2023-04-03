@@ -106,6 +106,8 @@
 				if (is_correct) {
 					this.totalCorrect++;
 				}
+				// 即使答錯，題目也會換為下一題
+				this.questionsAnswered++;
 			},
 		},
 	};
