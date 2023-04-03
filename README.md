@@ -1,6 +1,6 @@
 # Vue Quiz
 
-This template should help get you started developing with Vue 3 in Vite.
+This is an exercise on Vue with emits, props and CSS transion groups practice.
 
 ## Recommended IDE Setup
 
